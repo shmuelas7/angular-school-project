@@ -1,0 +1,36 @@
+<table class="table table-hover table-striped  ">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+            <th scope="col">Image</th>
+            <th scope="col">Class</th>
+            <th scope="col">profession</th>
+            <th scope="col">Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]="{'faild': pupil.avg() < 65,'past': pupil.avg() >= 65 }"*ngFor="let pupil of pupilsArr">
+            <td>{{ pupil.id }}</td>
+            <td>{{ pupil.name }}</td>
+            <td>{{ pupil.age }}</td>
+            <td>{{ pupil.city }}</td>
+            <td><img src="{{ pupil.image }}" style="width: 150px;"></td>
+            <td>{{ pupil.Class }}</td>
+            <td>
+                <ul *ngFor="let profession of pupil.professionarr">
+                   <li>{{profession.prof}}</li>
+                </ul>
+            </td>
+            <td>
+                <ul *ngFor="let profession of pupil.professionarr">
+                   <li>{{profession.grade}}</li> 
+                </ul>
+            </td>
+            <Button class="btn btn-warning" [routerLink]="['/pupil',pupil.id]" style="width: 100%; height: 100%;">Edit</Button>
+        </tr>
+    </tbody>
+</table>
+

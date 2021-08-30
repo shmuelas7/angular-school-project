@@ -1,0 +1,42 @@
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">name:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.name" />
+    <h4>{{ employees.name }}</h4>
+</div>
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">id:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.id" />
+    <h4>{{ employees.id }}</h4>
+</div>
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">city:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.city" />
+    <h4>{{ employees.city }}</h4>
+</div>
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">age:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.age" />
+    <h4>{{ employees.age }}</h4>
+</div>
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">work:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.work" />
+    <h4>{{ employees.work }}</h4>
+</div>
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">Number of hours per month	:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.monthPayment" />
+    <h4>{{ employees.monthPayment }}</h4>
+</div>
+<div *ngIf="employees | async as employees">
+    <h3 style="color: blue;">Payment for hour:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="employees.hourPayment" />
+    <h4>{{ employees.hourPayment }}</h4>
+</div>

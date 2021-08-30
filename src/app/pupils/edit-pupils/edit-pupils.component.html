@@ -1,0 +1,28 @@
+
+
+<div *ngIf="pupil | async as pupil">
+    <h3 style="color: blue;">name:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="pupil.name" />
+    <h4>{{ pupil.name }}</h4>
+</div>
+<div *ngIf="pupil | async as pupil">
+    <h3 style="color: blue;">id:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="pupil.id" />
+    <h4>{{ pupil.id }}</h4>
+</div>
+<div *ngIf="pupil | async as pupil">
+    <h3 style="color: blue;">age:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="pupil.age" />
+    <h4>{{ pupil.age }}</h4>
+</div>
+<div *ngIf="pupil | async as pupil">
+    <h3 style="color: blue;">city:</h3>
+    <input class="form-control" type="text"
+    [(ngModel)]="pupil.city" />
+    <h4>{{ pupil.city }}</h4>
+</div>
+
+

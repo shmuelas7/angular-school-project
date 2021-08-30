@@ -1,0 +1,29 @@
+<body style="background-color: #111;">
+<ul>
+    <div class="row">
+    <li *ngFor="let teacher of teachersArr">
+        <div class="col-4 text-light">
+        <div class="card" style= "background: #111; border: 2px solid #dd2476;">
+            <img src="{{teacher.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title text-center ">{{ teacher.name }}</h3>
+                <p class="  text-center">Hello, I'm {{ teacher.name }}
+                    I teach at X-MEN's School my ID card {{ teacher.id }}
+                I live in {{ teacher.city }} and my age is {{ teacher.age }}
+                and my hourly wage is{{teacher.saleryForHour}}$ And I work {{teacher.hoursWork}} hours
+                in total my price is  {{teacher.saleryForHour*teacher.hoursWork}}
+            </p>
+                <li *ngFor="let class of teacher.classArr">
+                <h6>I teach the following subjects in {{class.className}}</h6>
+                </li>
+                <ul *ngFor="let subject of teacher.subject">
+                    <li>{{subject}}</li>
+                </ul>  
+                <Button  class="btn btn-warning " [routerLink]="['/teachers', teacher.id]" style="width: 100%;">Edit</Button>
+            </div>
+        </div>
+    </div>
+    </li>
+</div>
+</ul>
+</body>
